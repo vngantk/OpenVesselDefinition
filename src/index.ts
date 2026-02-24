@@ -4,6 +4,8 @@ import {
   TContainerLengths,
   TImdgClasses,
 } from "./models/v1/parts/Types";
+import { TYesNo } from "./models/base/types/IPositionPatterns";
+import { IDangerousAndHazardous } from "./models/v1/parts/IDangerousAndHazardous";
 import {
   CraneSideEnum,
   IVesselPartBase,
@@ -15,8 +17,11 @@ import {
   VesselPartTypeEnum,
 } from "./models/v1/parts/IVesselPartsData";
 import IBayLevelData, {
+  IBayRowInfo,
   IBaySlotData,
   IBulkheadInfo,
+  ILashingBridgeInfo,
+  IRowInfoByLength,
   TBayRowInfo,
   TCommonBayInfo,
   TRowInfoByLength,
@@ -31,6 +36,8 @@ import IShipData, {
   ILCGOptions,
   IMasterCGs,
   IShipDataFromStaf,
+  ITGCOptions,
+  IVGCOptions,
 } from "./models/v1/parts/IShipData";
 import {
   LengthUnitsEnum,
@@ -43,7 +50,10 @@ import ForeAftEnum from "./models/base/enums/ForeAftEnum";
 import ILidData from "./models/v1/parts/ILidData";
 import IOpenVesselDefinitionV1 from "./models/v1/IOpenVesselDefinitionV1";
 import ISizeSummary from "./models/base/ISizeSummary";
-import ISlotData from "./models/v1/parts/ISlotData";
+import ISlotData, {
+  IAcceptsContainers,
+  ISlotSizeOptions,
+} from "./models/v1/parts/ISlotData";
 import LcgReferenceEnum from "./models/base/enums/LcgReferenceEnum";
 import OpenVesselDefinition from "./models/OpenVesselDefinition";
 import PortStarboardEnum from "./models/base/enums/PortStarboardEnum";
@@ -65,20 +75,27 @@ export {
   destructurePosition,
   ForeAftEnum,
   getContainerLengths,
+  IAcceptsContainers,
   IBayLevelData,
   IBayLevelOffsetBottomBase,
-  ISizeSummary,
+  IBayRowInfo,
   IBaySlotData,
   IBulkheadInfo,
+  IDangerousAndHazardous,
   IFeaturesAllowed,
+  ILashingBridgeInfo,
   ILCGOptions,
   ILidData,
   IMasterCGs,
   IOpenVesselDefinitionV1,
   IPositionLabels,
+  IRowInfoByLength,
   IShipData,
   IShipDataFromStaf,
   ISlotData,
+  ISlotSizeOptions,
+  ISizeSummary,
+  ITGCOptions,
   ITierRowLabelDictionaries,
   ITierRowLabelDictionary,
   IVesselPartBase,
@@ -87,6 +104,7 @@ export {
   IVesselParts,
   IVesselPartSmokeStack,
   IVesselPartSpacer,
+  IVGCOptions,
   LcgReferenceEnum,
   LengthUnitsEnum,
   OpenVesselDefinition,
@@ -102,6 +120,7 @@ export {
   TContainerLengths,
   TImdgClasses,
   TRowInfoByLength,
+  TYesNo,
   ValuesSourceEnum,
   ValuesSourceRowTierEnum,
   VesselPartTypeEnum,

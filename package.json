@@ -17,6 +17,7 @@
     "typescript": "^4.9.3"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "rm -rf build/ && tsc",
     "test": "jest --watch --verbose",
     "testCI": "jest --passWithNoTests",
